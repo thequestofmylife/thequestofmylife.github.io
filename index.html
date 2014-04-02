@@ -7,17 +7,14 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
+    <link href="css/timeline.css" rel="stylesheet">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/storyjs-embed.js"></script>
     <script>
-            $(document).ready(function() {
-                createStoryJS({
-                    type:       'timeline',
-                    source:     'json/love_data.json',
-                    embed_id:   'love-timeline'
-                });
-            });
+	$(document).ready(function() {
+		var timeline = new VMM.Timeline();
+		timeline.init('json/love_data.json');
+	});
     </script>
 
     <!-- HTML5 shim, for IE6-8 support of HTML elements--><!--[if lt IE 9]>
