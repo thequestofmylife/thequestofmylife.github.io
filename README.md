@@ -1,2 +1,2 @@
-thequestofmylife.github.io
-==========================
+www.thequestofmylife.com
+========================
