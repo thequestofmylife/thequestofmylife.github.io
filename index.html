@@ -1,18 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><!--
-     
-    88888888888 d8b                        888 d8b                888888   d8888b  
-        888     Y8P                        888 Y8P                   88b d88P  Y88b 
-        888                                888                       888 Y88b
-        888     888 88888b d88b     d88b   888 888 88888b     d88b   888   Y888b
-        888     888 888  888  88b d8P  Y8b 888 888 888  88b d8P  Y8b 888      Y88b
-        888     888 888  888  888 88888888 888 888 888  888 88888888 888        888 
-        888     888 888  888  888 Y8b      888 888 888  888 Y8b      88P Y88b  d88P 
-        888     888 888  888  888   Y8888  888 888 888  888   Y8888  888   Y8888P
-                                                                    d88P            
-                                                                  d88P             
-                                                                888P              
-     -->
+<html lang="en">
   <head>
     <title>The Quest Of My Life ::: Sangavi</title>
     <meta charset="utf-8">
@@ -20,6 +7,24 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- BEGIN TimelineJS -->
+    <script type="text/javascript" src="js/storyjs-embed.js"></script>
+    <script>
+            $(document).ready(function() {
+                createStoryJS({
+                    type:       'timeline',
+                    width:      '800',
+                    height:     '600',
+                    source:     'json/love_data.json',
+                    embed_id:   'love-timeline'
+                });
+            });
+    </script>
+    <!-- END TimelineJS -->
+
     <!-- Style-->
     <style>
       html, body {
@@ -31,18 +36,9 @@
       #timeline-embed { height: 100%; }
     </style>
     <!-- HTML5 shim, for IE6-8 support of HTML elements--><!--[if lt IE 9]>
-    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+    <script src="js/html5.js"></script><![endif]-->
   </head>
 </html>
 <body>
-  <div id="timeline-embed"></div>
-  <script type="text/javascript">
-    var trim_point = window.location.href.indexOf('index.html');
-    if (trim_point > 0) {
-      var embed_path = window.location.href.substring(0,trim_point);  
-    } else {
-      var embed_path = "http://cdn.knightlab.com/libs/timeline/latest/";
-    }
-  </script>
-  <script type="text/javascript" src="js/storyjs-embed-cdn.js?v214"></script>
+	<div id="love-timeline"></div>
 </body>
